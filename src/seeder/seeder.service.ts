@@ -22,9 +22,9 @@ export class SeederService {
         private diamondPricingService: DiamondPricingService) { }
 
     async seed() {
-        const shapes = require('./seed-data/shapes.json') as Shape[];
-        const colors = require('./seed-data/colors.json') as Color[];
-        const clarities = require('./seed-data/clarities.json') as Clarity[];
+        const shapes = [{ name: 'Asscher' }, { name: 'Emerald' }, { name: 'Cushion' }, { name: 'Heart' }, { name: 'Marquise' }, { name: 'Oval' }, { name: 'Pear' }, { name: 'Round' }, { name: 'Princess' }];
+        const colors = [{ name: 'D' }, { name: 'E' }, { name: 'F' }, { name: 'G' }, { name: 'H' }, { name: 'I' }, { name: 'J' }];
+        const clarities = [{ name: 'IF' }, { name: 'VVS1' }, { name: 'VVS2' }, { name: 'VS1' }, { name: 'VS2' }, { name: 'SI1' }, { name: 'SI2' }];
 
         // has to go with 'raw' here as SET FOREIGN_KEY_CHECKS does not have built-in support   
         let transaction: Transaction;
