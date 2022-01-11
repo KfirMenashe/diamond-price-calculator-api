@@ -6,14 +6,15 @@ import { Clarity } from 'src/diamond-characteristics/models/clarity.model';
 import { Color } from 'src/diamond-characteristics/models/color.model';
 import { Shape } from 'src/diamond-characteristics/models/shape.model';
 import { DiamondPricingService } from 'src/diamond-pricing/diamond-pricing.service';
-import { DiamondPricingRequest } from 'src/diamond-pricing/dto/diamond-pricing-request.dto';
 import { Diamond } from 'src/diamond/models/diamond.model';
+
 
 
 @Injectable()
 export class SeederService {
 
     constructor(
+        
         private sequelize: Sequelize,
         @InjectModel(Shape) private shapeModel: typeof Shape,
         @InjectModel(Color) private colorModel: typeof Color,
@@ -22,6 +23,11 @@ export class SeederService {
         private diamondPricingService: DiamondPricingService) { }
 
     async seed() {
+
+
+        
+
+
         const shapes = [{ name: 'Asscher' }, { name: 'Emerald' }, { name: 'Cushion' }, { name: 'Heart' }, { name: 'Marquise' }, { name: 'Oval' }, { name: 'Pear' }, { name: 'Round' }, { name: 'Princess' }];
         const colors = [{ name: 'D' }, { name: 'E' }, { name: 'F' }, { name: 'G' }, { name: 'H' }, { name: 'I' }, { name: 'J' }];
         const clarities = [{ name: 'IF' }, { name: 'VVS1' }, { name: 'VVS2' }, { name: 'VS1' }, { name: 'VS2' }, { name: 'SI1' }, { name: 'SI2' }];

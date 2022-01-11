@@ -16,9 +16,9 @@ import { SeederModule } from './seeder/seeder.module';
     SequelizeModule.forRoot({
       dialect: 'mysql',
       host: 'localhost',
-      port: 3306,
+      port: 3333,
       username: 'root',
-      password: 'iLovemysql1!',
+      password: 'iLovemysql2@',
       database: 'worthy',
       autoLoadModels: true,
       synchronize: true,
